@@ -1,20 +1,33 @@
-﻿// labolatorium1zad2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
-
-#include <iostream>
-
+﻿#include <iostream>
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+	// double bo wykładniki nie muszą być liczbami całkowitymi
+	// a,b,c 1/2 współczynniki z 1 lub 2 równania
+	double a1, b1, c1, a2, b2, c2;
+	cout << "Podaj a1,b1,c1,a2, b2, c2 " << endl;
+	cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
+	cout << a1 << "x + " << b1 << "y = " << c1 << endl;
+	cout << a2 << "x + " << b2 << "y = " << c2 << endl;
+	// Metoda wyznaczników
+	double W = a1 * b2 - a2 * b1;
+	double Wx = c1 * b2 - c2 * b1;
+	double Wy = a1 * c2 - a2 * c1;
+	cout << "W = " << W << endl;
+	cout << "Wx = " << Wx << endl;
+	cout << "Wy = " << Wy << endl;
+	// Sprawdzenie czy układ jest tożsamościowy albo sprzeczny
+	if (W != 0)
+	{
+		cout << "Uklad jest oznaczony i ma rozwiazania: x = " << Wx / W << " oraz y = " << Wy / W;
+	}
+	else if (W == 0 && Wx == 0 && Wy == 0)
+	{
+		cout << "Uklad jest nieoznaczony, posiada nieskonczenie wiele rozwiazan";
+	}
+	else if (W == 0 && Wx != 0 || Wy != 0)
+	{
+		cout << "Uklad jest sprzeczny";
+	}
+	return 0;
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
