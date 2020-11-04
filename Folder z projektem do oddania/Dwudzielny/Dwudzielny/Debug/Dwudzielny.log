@@ -1,0 +1,6 @@
+﻿  Dwudzielny.cpp
+C:\Users\agnie\source\repos\Dwudzielny\Dwudzielny\Dwudzielny.cpp(119,27): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\agnie\source\repos\Dwudzielny\Dwudzielny\Dwudzielny.cpp(158,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  funkcje.cpp
+  Generowanie kodu...
+  Dwudzielny.vcxproj -> C:\Users\agnie\source\repos\Dwudzielny\Debug\Dwudzielny.exe
